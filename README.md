@@ -2,6 +2,8 @@
 
 A comprehensive, object-oriented library management system built with Java, demonstrating advanced OOP principles, SOLID design patterns, and clean architecture.
 
+![Library System](diagram.png)
+
 ## Features
 
 ### **Authentication System**
