@@ -47,14 +47,14 @@ A comprehensive, object-oriented library management system built with Java, demo
 
 ### **Key Components**
 ```
-📦 Core Architecture
-├── 🔗 Interfaces (FinesApplicable, ExamEnrollable)
-├── 🏛️ Abstract Classes (Member, LibraryItem)
-├── 👥 User Models (Student, Admin)
-├── 📚 Item Models (Book, Magazine, DVD, EBook)
-├── 🔄 Services (LibrarySystem)
-├── 🖥️ UI Layer (MenuHandler)
-└── 📊 Models (BorrowRecord)
+Core Architecture
+├── Interfaces (FinesApplicable, ExamEnrollable)
+├── 🏛Abstract Classes (Member, LibraryItem)
+├── User Models (Student, Admin)
+├── Item Models (Book, Magazine, DVD, EBook)
+├── Services (LibrarySystem)
+├── 🖥UI Layer (MenuHandler)
+└── Models (BorrowRecord)
 ```
 
 ## Quick Start
@@ -114,21 +114,21 @@ The system comes pre-loaded with sample data. You can register new students or u
 
 ### **Main Menu Flow**
 ```
-📋 Login Menu
-├── 👨‍🎓 Student Login
-│   ├── 🔍 Search Books
-│   ├── 📚 View Available Items
-│   ├── 📖 Borrow Item
-│   ├── 📤 Return Item
-│   ├── 📜 View History
-│   └── 💰 Check Fines
-└── 👩‍🏫 Admin Login
-    ├── ➕ Add Library Item
-    ├── ➖ Remove Library Item
-    ├── 📋 View All Items
-    ├── 👥 View All Users
-    ├── 📊 Generate Reports
-    └── 🔍 Search Items
+Login Menu
+├── Student Login
+│   ├── Search Books
+│   ├── View Available Items
+│   ├── Borrow Item
+│   ├── Return Item
+│   ├── View History
+│   └── Check Fines
+└── Admin Login
+    ├── Add Library Item
+    ├── Remove Library Item
+    ├── View All Items
+    ├── View All Users
+    ├── Generate Reports
+    └── Search Items
 ```
 
 ## Project Structure
@@ -214,7 +214,7 @@ The system includes pre-loaded sample data:
 3. **Interfaces**: Add behavior contracts
 4. **Services**: Extend `LibrarySystem` functionality
 
-## 📈 Performance
+## Performance
 
 ### **Optimization Features**
 - **HashMap lookups**: O(1) average time complexity
@@ -244,7 +244,7 @@ This project demonstrates:
 - **Software architecture**: Layered, modular design
 - **Testing strategies**: Unit testing and quality assurance
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
