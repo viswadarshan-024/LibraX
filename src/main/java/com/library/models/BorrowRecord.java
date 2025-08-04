@@ -3,7 +3,40 @@ package com.library.models;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class BorrowRecord {
+class BorrowKey implements Comparable<BorrowKey> {
+    String memberId;
+    String itemId;
+
+    public BorrowKey(String memberId, String itemId) {
+        this.memberId = memberId;
+        this.itemId = itemId;
+    }
+
+    @Override
+    public int compareTo(BorrowKey other) {
+        int cmp = memberId.compareTo(other.memberId);
+        return cmp != 0 ? cmp : itemId.compareTo(other.itemId);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof BorrowKey)) return false;
+        BorrowKey other = (BorrowKey) obj;
+        return memberId.equals(other.memberId) && itemId.equals(other.itemId);
+    }
+
+    @Override
+    public int hashCode() {
+        return memberId.hashCode() + 31 * itemId.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return memberId + ":" + itemId;
+    }
+}
+
+class BorrowRecord {
     private String memberId;
     private String itemId;
     private LocalDate borrowDate;
@@ -47,4 +80,16 @@ public class BorrowRecord {
     public LocalDate getReturnDate() { return returnDate; }
     public double getFine() { return fine; }
     public void setFine(double fine) { this.fine = fine; }
+
+    @Override
+    public String toString() {
+        return "BorrowRecord{" +
+               "memberId='" + memberId + '\'' +
+               ", itemId='" + itemId + '\'' +
+               ", borrowDate=" + borrowDate +
+               ", dueDate=" + dueDate +
+               ", returnDate=" + returnDate +
+               ", fine=" + fine +
+               '}';
+    }
 }
